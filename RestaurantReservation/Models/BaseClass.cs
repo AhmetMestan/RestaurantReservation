@@ -11,6 +11,6 @@ namespace RestaurantReservation.Models
     {
         [Key]
         public int Id { get; set; }
-        public DateTime? AddDate { get; set; }
+        public DateTime? AddDate { get; set; }=DateTime.Now;
     }
 }

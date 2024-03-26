@@ -13,6 +13,7 @@ namespace RestaurantReservation.Models
         [ForeignKey("CustomersId")]
         public Customers Customers { get; set; }
         public DateTime ReservationDate { get; set; }
+        public string Note { get; set; }
 
     }
 }

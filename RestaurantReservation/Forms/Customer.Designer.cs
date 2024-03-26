@@ -36,10 +36,10 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            txtName = new TextBox();
+            txtSurname = new TextBox();
+            txtEmail = new TextBox();
+            txtPhone = new TextBox();
             dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -52,6 +52,7 @@
             btnAdd.TabIndex = 0;
             btnAdd.Text = "ADD";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnDelete
             // 
@@ -61,6 +62,7 @@
             btnDelete.TabIndex = 0;
             btnDelete.Text = "DELETE";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnUpdate
             // 
@@ -70,6 +72,7 @@
             btnUpdate.TabIndex = 0;
             btnUpdate.Text = "UPDATE";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnRemove
             // 
@@ -116,33 +119,33 @@
             label4.TabIndex = 1;
             label4.Text = "Phone";
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.Location = new Point(172, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(242, 27);
-            textBox1.TabIndex = 2;
+            txtName.Location = new Point(172, 20);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(242, 27);
+            txtName.TabIndex = 2;
             // 
-            // textBox2
+            // txtSurname
             // 
-            textBox2.Location = new Point(172, 60);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(242, 27);
-            textBox2.TabIndex = 2;
+            txtSurname.Location = new Point(172, 60);
+            txtSurname.Name = "txtSurname";
+            txtSurname.Size = new Size(242, 27);
+            txtSurname.TabIndex = 2;
             // 
-            // textBox3
+            // txtEmail
             // 
-            textBox3.Location = new Point(172, 107);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(242, 27);
-            textBox3.TabIndex = 2;
+            txtEmail.Location = new Point(172, 107);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(242, 27);
+            txtEmail.TabIndex = 2;
             // 
-            // textBox4
+            // txtPhone
             // 
-            textBox4.Location = new Point(172, 152);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(242, 27);
-            textBox4.TabIndex = 2;
+            txtPhone.Location = new Point(172, 152);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(242, 27);
+            txtPhone.TabIndex = 2;
             // 
             // dataGridView1
             // 
@@ -152,6 +155,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(653, 188);
             dataGridView1.TabIndex = 3;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // Customer
             // 
@@ -159,10 +163,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtPhone);
+            Controls.Add(txtEmail);
+            Controls.Add(txtSurname);
+            Controls.Add(txtName);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -173,6 +177,7 @@
             Controls.Add(btnAdd);
             Name = "Customer";
             Text = "Customer";
+            Load += Customer_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -188,10 +193,10 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox txtName;
+        private TextBox txtSurname;
+        private TextBox txtEmail;
+        private TextBox txtPhone;
         private DataGridView dataGridView1;
     }
 }
